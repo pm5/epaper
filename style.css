@@ -9,17 +9,8 @@ body {
   color: #555555;
   text-rendering: optimizeLegibility;
   min-width: 320px;
-  background: rgb(247,247,247);
-
-}
-body.without-sidebar {
-  margin-left: 0px;
-  overflow: scroll;
-}
-body.with-sidebar {
-  margin-left: 150px;
-  overflow: hidden;
-  height: 100%;
+  background: rgb(238,234,231);
+  /* background: rgb(53,53,53); */
 }
 .info {
   font-size: 18px;
@@ -58,69 +49,207 @@ a {
 /* Responsive Setup */
 /* ------------------------------------------------------------ */
 @media screen and (min-width: 1000px){
-  .wrapper{
-     width: 1000px;
-  }
-  .nav{
-    width:1000px;
-    margin:0 auto;
-  }
-  .mobi{
-    display: none;
+  .wrapper, .transparent_wrapper{
+     width: 600px;
   }
 }
 @media screen and (max-width: 1000px){
-  .mobi{
-    display: none;
-  }
-}
-@media screen and (max-width: 800px){
-  .web{
-    display: none;
-  }
-  .mobi{
-    display: inline-block;
+  .wrapper, .transparent_wrapper{
+     width: 600px;
   }
 }
 @media (max-width: 400px){
-  .wrapper{
+  .wrapper, .transparent_wrapper{
      width: 100%;
      box-sizing: border-box;
   }
-  .web{
-    display: none;
-  }
-  .mobi{
-    display: inline-block;
-  }
 }
-@media print
-{
-    .mobi{
-        display: none !important;
-    }
-}
+
 /* ------------------------------------------------------------ */
 /* Genaral Layout */
 /* ------------------------------------------------------------ */
 .page_wrapper{
   /* background: white; */
 }
+.transparent_wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+
+}
+.transparent_wrapper h1 {
+  margin:0;
+  text-align: center;
+}
 .wrapper{
-  padding-top: 15px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-  padding:8px;
+  background: rgb(247,247,247);
+  background: white;
+  /*
+  -webkit-box-shadow: #888 0px 1px 2px;
+  -moz-box-shadow: #888 0px 1px 2px;
+  box-shadow: #888 0px 1px 2px;
+  */
+}
+
+.header {
+  padding:10px;
+}
+.header_icon {
+  width: 100px;
+  border-radius: 100%;
+  vertical-align: bottom;
+}
+.header_logo {
+  width: 240px;
+  vertical-align: top;
+  margin-top: 30px;
+}
+.header_vol {
+  vertical-align: top;
+  margin-top: 40px;
+  margin-left: 10px;
+  font-size: 18px;
+  display: inline-block;
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-weight: 600;
+  color: rgb(98,195,204);
+  /* color: rgb(243,206,55); yellow*/
+}
+.header_meta {
+  text-align: right;
+  position: relative;
+}
+.header_meta > img {
+  width: 120px;
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
 
 }
-.cover img{
+.cover {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.cover p {
+  line-height: 18px;
+}
+.focus_section {
+  position: relative;
+}
+.focus_img{
   margin: 0px;
   width:100%;
   position: relative;
   text-align: center;
 }
+.focus_info {
+  position: absolute;
+  min-height: 25px;
+  bottom: 3px;
+  padding-left: 5px;
+  padding-top: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  color: rgb(200,200,200);
+  font-size: 10px;
+  /* background: rgba(0,0,0,0.7); */
+}
+.focus_info a, .focus_info a:visited{
+  color: rgb(200,200,200);
+}
+.focus_info a:hover {
+  color: rgb(230,230,230);
+}
+.license_img {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+.comment_block {
+  margin-top: 10px;
+}
+.comment_header {
+  margin-bottom: 10px;
+  border: 1px solid rgba(50,53,48,0.6);
+  padding: 8px;
+  color: rgba(50,53,48,0.9);
+  box-sizing: border-box;
+  font-weight: 600;
+}
+.commenter {
+  width: 100px;
+  float:left;
+  background: rgb(200,200,200);
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 10px;
+}
+.commenter_bio {
+  font-size: 10px;
+  display: inline-block;
+  margin: 3px;
+}
+@media (max-width: 400px){
+  .commenter {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .commenter_bio {
+    max-width: 200px;
+  }
+}
+.commenter_img {
+  width: 100px;
+  vertical-align: top;
+}
+.comment_text {
+  display: inline-block;
+  max-width: 460px;
+}
+.comment_text p {
+  margin-top: 0px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.sign_block {
+  position: relative;
+  min-height: 40px;
+}
+.sign_button {
+  position: absolute;
+  right: 5px;
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+  border: 1px solid rgba(214,90,90,0.6);
+  padding: 8px;
+  color: rgba(214,90,90,1);
+  box-sizing: border-box;
+}
+.sign_button:hover {
+  background: rgba(214,90,90,1);
+  color: white;
+}
+/* ------------------------- */
+.respond_cnadidate {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 0px;
+}
+.question_card {
+  border-bottom: 3px dashed rgb(230,230,230);
+  padding-bottom: 10px;
+  width: 98%;
+}
+.go_block {
+  padding: 20px;
+}
+/* ------------------------- */
 .index_block_section {
+  margin-top:20px;
   text-align: center;
 }
 .index_block_header {
@@ -129,7 +258,6 @@ a {
   width: 100%;
   margin: 0 auto;
   height: 40px;
-  margin-bottom: 4px;
   padding: 10px;
   box-sizing:border-box;
 }
@@ -150,8 +278,22 @@ a {
   font-weight: 600;
   margin-bottom: 1px;
 }
+.index_block ul {
+  text-align: left;
+  color: rgb(120,120,120);
+}
 .index_block p {
   font-size: 16px;
+}
+.response_rate_text {
+  vertical-align: middle;
+
+}
+.response_rate {
+  color:rgba(214,90,90,1);
+  font-weight: bolder;
+  font-family: Georgia;
+  font-size: 24px;
 }
 .ask_button {
   margin: 0 auto;
@@ -167,18 +309,9 @@ a {
   background: rgba(50,53,48,1);
   color: white;
 }
-.ask_button_later {
-  margin: 0 auto;
-  width: 100px;
-  text-decoration: center;
-  border: 1px solid rgba(50,53,48,0.5);
-  padding: 8px;
-  color: rgba(50,53,48,0.7);
-  box-sizing: border-box;
-}
 @media screen and (min-width: 800px){
   .index_block{
-     width: 33%;
+     width: 30%;
      display: inline-block;
   }
   h1 {
@@ -200,13 +333,31 @@ a {
   }
 
 }
-/*
-canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
+@media screen and (min-width: 800px){
+  .video-container {
+      width: 560px;
+      height: 315px;
+      display: inline-block;
+  }
+  .video-text {
+      max-width: 400px;
+  }
 }
-*/
+@media (max-width: 400px){
+  .video-container,.video-text {
+     width: 100%;
+  }
+}
+.behind_pic {
+  border-radius: 100%;
+  width: 60px;
+}
+.behind_bio {
+  font-size: 12px;
+  vertical-align: top;
+  padding-top: 10px;
+  display: inline-block;
+  width: 150px;
+  color: rgb(100,100,100);
+  margin-left: 10px;
+}

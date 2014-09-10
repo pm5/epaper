@@ -60,7 +60,7 @@ a {
 }
 @media (max-width: 400px){
   .wrapper, .transparent_wrapper{
-     width: 100%;
+     width: 95%;
      box-sizing: border-box;
   }
 }
@@ -118,6 +118,21 @@ a {
   color: rgb(98,195,204);
   /* color: rgb(243,206,55); yellow*/
 }
+@media (max-width: 400px){
+  .header_icon {
+     width: 80px;
+  }
+  .header_logo {
+     width: 180px;
+     margin-top: 25px;
+  }
+  .header_vol {
+    font-size: 12px;
+    margin-top: 0px;
+    margin-left: 15px;
+  }
+}
+
 .header_meta {
   text-align: right;
   position: relative;
@@ -198,7 +213,7 @@ a {
     margin-bottom: 15px;
   }
   .commenter_bio {
-    max-width: 200px;
+    max-width: 160px;
   }
 }
 .commenter_img {

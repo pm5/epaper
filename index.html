@@ -1,201 +1,299 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Standard Meta -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <!-- Site Properities -->
-    <title>市長，給問嗎</title>
-    <link rel="shortcut icon" href="logo.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Site Properities -->
+  <title>市長，給問嗎</title>
+  <link rel="shortcut icon" href="logo.png">
+  <style type="text/css">
+    html,
+    body {
+      font-size: 15px;
+      height: 100%;
+      font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "\5FAE\8EDF\6B63\9ED1\9AD4", sans-serif;
+      background: #FFFFFF;
+      margin: 0px;
+      padding: 0px;
+      color: #555555;
+      text-rendering: optimizeLegibility;
+      min-width: 320px;
+      background: rgb(238,234,231);
+      /* background: rgb(53,53,53); */
+    }
+    .info {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    a {
+      text-decoration: none;
+    }
+    .link:hover{
+      color: #00BAFF;
+    }
+    .link{
+      color: #009FDA;
+      text-decoration: none;
+      -webkit-transition: color 0.3s ease;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    .dark_link:hover{
+      color: rgba(50,53,48,0.7);
+    }
+    .dark_link, .dark_link:visited{
+      color: rgb(50,53,48);
+      text-decoration: none;
+      -webkit-transition: color 0.3s ease;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    .color_red {
+      color:rgba(214,90,90,1);
+      font-weight: bolder;
+
+    }
+
+    /* ------------------------------------------------------------ */
+    /* Responsive Setup */
+    /* ------------------------------------------------------------ */
+    @media screen and (min-width: 1000px){
+      .wrapper, .transparent_wrapper{
+         width: 600px;
+      }
+    }
+    @media screen and (max-width: 1000px){
+      .wrapper, .transparent_wrapper{
+         width: 600px;
+      }
+    }
+    @media (max-width: 400px){
+      .wrapper, .transparent_wrapper{
+         width: 95%;
+         box-sizing: border-box;
+      }
+    }
+
+    /* ------------------------------------------------------------ */
+    /* Genaral Layout */
+    /* ------------------------------------------------------------ */
+    .page_wrapper{
+      /* background: white; */
+    }
+    .transparent_wrapper {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+
+    }
+    .transparent_wrapper h1 {
+      margin:0;
+      text-align: center;
+    }
+    .wrapper{
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
+      background: rgb(247,247,247);
+      background: white;
+      /*
+      -webkit-box-shadow: #888 0px 1px 2px;
+      -moz-box-shadow: #888 0px 1px 2px;
+      box-shadow: #888 0px 1px 2px;
+      */
+    }
+
+    .header {
+      padding:10px;
+    }
+    .header_icon {
+      width: 100px;
+      border-radius: 100%;
+      vertical-align: bottom;
+    }
+    .header_logo {
+      width: 240px;
+      vertical-align: top;
+      margin-top: 30px;
+    }
+    .header_vol {
+      vertical-align: top;
+      margin-top: 40px;
+      margin-left: 10px;
+      font-size: 18px;
+      display: inline-block;
+      font-family: Helvetica, Arial, Sans-Serif;
+      font-weight: 600;
+      color: rgb(98,195,204);
+      /* color: rgb(243,206,55); yellow*/
+    }
+    @media (max-width: 400px){
+      .header_icon {
+         width: 80px;
+      }
+      .header_logo {
+         width: 180px;
+         margin-top: 25px;
+      }
+      .header_vol {
+        font-size: 12px;
+        margin-top: 0px;
+        margin-left: 15px;
+      }
+    }
+
+    .header_meta {
+      text-align: right;
+      position: relative;
+    }
+    .header_meta > img {
+      width: 120px;
+      position: absolute;
+      right: 0px;
+      bottom: 5px;
+
+    }
+    .cover {
+      /*padding: 10px;*/
+      box-sizing: border-box;
+    }
+    .cover p {
+      line-height: 18px;
+    }
+    .focus_section {
+      position: relative;
+    }
+    .focus_img{
+      margin: 0px;
+      width:100%;
+      position: relative;
+      text-align: center;
+    }
+    .focus_info {
+      position: absolute;
+      min-height: 25px;
+      bottom: 3px;
+      padding-left: 5px;
+      padding-top: 5px;
+      box-sizing: border-box;
+      width: 100%;
+      color: rgb(200,200,200);
+      font-size: 10px;
+      /* background: rgba(0,0,0,0.7); */
+    }
+    .focus_info a, .focus_info a:visited{
+      color: rgb(200,200,200);
+    }
+    .focus_info a:hover {
+      color: rgb(230,230,230);
+    }
+    .license_img {
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+    }
+    .section {
+      padding: 0 40px;
+      margin: 0 0 55px 0;
+      position: relative;
+    }
+    .section h2 {
+      color: #002452;
+    }
+    .section h2, .section h3 {
+      margin: 2px 0;
+      font-size: 30px;
+    }
+    .section p {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+    .section a {
+      font-size: 12px;
+      float: right;
+      background-color: #A4434E;
+      color: white;
+      border: 0;
+      margin: 5px 0;
+      padding: 2px 6px 3px 6px;
+    }
+
+  </style>
+
 </head>
 <body>
-
-<!-- ////////////////////////////////////////////////////////////// -->
-
-    <div class="transparent_wrapper">
-        <div class="header">
-        <!-- <img src="colored_logo.svg"/> -->
-        <!-- <img class="header_icon" src="okman.jpg"/>-->
-        <img class="header_icon" src="main.png"/>
-        <img class="header_logo" src="textonly.png"/>
-        <span class="header_vol">ISSUE#1</span>
-        </div>
-        <div class="header_meta">
-            <img src="watchout_logo.png"/>
-        </div>
+  <!-- ////////////////////////////////////////////////////////////// -->
+  <div class="transparent_wrapper">
+    <div class="header">
+      <!-- <img src="colored_logo.svg"/> -->
+      <!-- <img class="header_icon" src="okman.jpg"/>-->
+      <img class="header_icon" src="main.png"/>
+      <img class="header_logo" src="textonly.png"/>
+      <span class="header_vol">ISSUE#1</span>
     </div>
-<!-- ////////////////////////////////////////////////////////////// -->
-
-    <div class="wrapper">
-        <div class="index_block_header">精選提問</div>
-        <div class="cover">
-          <div class="focus_section">
-              <img class="focus_img" src="focus_story.jpg"/>
-              <div class="focus_info">
-                <a href="https://www.flickr.com/photos/puisney/2492259855" target="_new">來源</a> |
-                <a href="https://www.flickr.com/photos/puisney/" target="_new">作者 Cédric Puisney</a>
-                <a href="https://creativecommons.org/licenses/by-nd/2.0/" target="_new"><img class="license_img" src="license/CC-BY-ND.png" width="30px;"></a>
-              </div>
-          </div>
-          <h2>對性交易專區的看法</h2>
-          <p>立法院院會通過「社會秩序維護法」修正案，未來將改由地方政府規劃設置「性交易專區」，凡專區內進行性交易，娼嫖都不罰，專區外性交易，娼嫖都處三萬元以下罰鍰。 </p>
-          <p>目前台北並無打算設置性交易專區，全台灣的地方政府也沒有人願意面對該議題，但是難道沒有專區就沒有性交易的問題嗎? 一樓一鳳取締查察較為困難不說，萬華天橋就站在路邊又鄰近警察局，半套色情養生館林立，這些事實就擺在眼前， 但就是不見政府有所作為，是真的不知道還是不願面對呢?不設置專區，加強取締又不見成效，色情行業還是氾濫，設置專區又怕地區民眾反對，選票跑光， 所以想請問各市長候選人對於性交易專區心裡的想法是什麼?</p>
-
-          <!-- comment block -->
-          <div class="comment_block">
-              <div class="comment_header">哲學部落客看提問</div>
-
-              <div class="commenter">
-                   <img class="commenter_img" src="kris.jpg"/>
-                   <div class="commenter_bio"><b>朱家安</b><p>「哲學哲學雞蛋糕」部落格格主、為了婚姻平權放棄婚姻的男人。</p></div>
-              </div>
-
-              <div class="comment_text">
-                <p>這題很棒。一個「不可能的」事件的危機處理，可以看出一個市長如何想像一個城市的可能性以及面對災難的態度。</p>
-                <p>事實上，很多事故是我們「想不到的」，這些事故，我們不會演習（如果有城市跑去演習「活屍危機」，我們應該譴責他），但是一旦發生了，我們依然要面對。這考驗市長對城市的了解。</p>
-                <p>而活屍作為一種「不了解原因的現象」，更能看出一個市長面對未知事件的時候的處理態度。</p>
-                <p>透過這樣的「不可能的」問題的「現實化」，將這許多判斷能力、處理能力的要點容納進去。</p>
-                <p>所以說，真是一個很棒的問題，快去連署吧！（其實是洪偉寫的）</p>
-              </div>
-          </div>
-          <!-- //////////// -->
-          <div class="sign_block">
-             <a href="http://hearttaipei.wetheptt.cc" target="_new"><div class="sign_button">連署去</div></a>
-          </div>
-        </div>
-    </div><!-- end of wrapper -->
-
-<!-- /////////////////////////////////////////////////////////// -->
-    <div class="wrapper">
-        <div class="index_block_header">本週新回答</div>
-        <div class="cover">
-            <div class="question_card">
-                 <h3><span class="color_red">579 位市民</span> 提問：保障公民記者的採訪權</h3>
-                 <p>從318學潮以來，傳統媒體不能給予、甚至企圖掩蓋真相，許多重要訊息是由公民記者揭露。 憲法保障公民記者的採訪自由，從司法院釋字第613號、第689號就可以看到，新聞自由所保障之新聞採訪自由並非僅保障隸屬於新聞機構之新聞記者之採訪行為，亦保障一般人未提供具新聞價值之資訊於眾，或為促進公共事務討論以監督政府，而從事之新聞採訪行為。</p>
-                 <p>然而近期的新聞中，我們看到許多公民記者遭受不平等甚至暴力對待，從政府機關只認可傳統媒體證件，不允許公民記者採訪，警方除了阻攔之外，甚至會驅趕或施暴公民記者，導致人身或器材的損傷，卻未看見政府有積極作為，來保障公民記者的採訪權。 若您當選台北市市長，您會如何保障公民記者的採訪權？又會實行那些實際措施，作為全台灣的示範？</p>
-            </div>
-            <img src="feng.png" width="60px;">
-            <h3 class="respond_cnadidate">馮光遠回答</h3>
-            <p>國民黨全面執政之後，對於媒體的不友善一直不是新聞。到了318學運時，馬英九政府對於新聞採訪自由的打壓更是來到新的高度。</p>
-
-            <p>一開始在民眾衝進立法院的過程中，在現場進行拍攝與紀錄的知名紀錄片導演李惠仁，就在警方企圖阻撓其進行現場記錄的意圖下，遭到警方強行逮捕，並在逮捕的過程中造成攝影器材的損壞，公然的侵害民眾自由權、損害民眾財產權。</p>
-
-            <p>而在反核運動忠孝東路的強制驅離過程中，受害的記者不再侷限於公民記者，蘋果日報的記者亦在表明身份拍攝現場狀況時，遭到現場員警以警棍毆打致攝影器材掉落，阻撓記者對於驅離現場的拍攝與紀錄。...<a class="dark_link" href="http://wethepeople.tw/#!/question/-JSDFAIQ-KRcWEn0rrV_/-JFxrKQo3Qg19zsW73b1">（繼續閱讀）</a></p>
-
-            <!-- //////////// -->
-            <div class="sign_block">
-                <a href="http://hearttaipei.wetheptt.cc" target="_new"><div class="sign_button">看完整回答</div></a>
-            </div>
-        </div>
-    </div><!-- end of wrapper -->
-<!-- /////////////////////////////////////////////////////////// -->
-    <div class="wrapper">
-        <div class="index_block_header">本週新提問</div>
-        <div class="cover">
-            <div class="question_card">
-                <h2>請問：成龍的鼻子有幾個？</h2>
-                <p>幽默文學家契柯夫說：「笑可以使人樂觀地看待現實，幫助人們更好地適應環境」</p>
-                <p>這個問題沒有唯一解或標準解，重點是在於，候選人們與他的團隊，要如何去找出這個問題的本意， 如何思考與理解這個問題，如何回答這個問題，關鍵在於如何與年輕人互動，了解年輕人的次文化， 以及最重要的，如何展現出候選人的幽默感。...<a class="dark_link" href="http://wethepeople.tw/#!/question/-JWT1lCBcbS-27Ulq85D">（繼續閱讀）</a></p>
-                <div class="sign_block">
-                   <a href="http://wethepeople.tw/#!/question/-JWT1lCBcbS-27Ulq85D" target="_new"><div class="sign_button">加入連署</div></a>
-                </div>
-            </div>
-            <div class="question_card">
-                <h2>如果發生市議員在市議會不斷杯葛，造成預算難以通過，政見窒礙難行時又該怎麼辦？</h2>
-                <p>這次非常難得有兩位候選人是無黨籍的，在台灣不是藍就是綠，市議員大概也都是這兩種顏色，當一個好政策牴觸到兩黨利益時，有可能在市議會被杯葛，預算不如預期，政策窒礙難行，這時又該如何解決?...<a class="dark_link" href="http://wethepeople.tw/#!/question/-JWSsGsV6hziQqGUk7IG">（繼續閱讀）</a></p>
-                <div class="sign_block">
-                   <a href="http://wethepeople.tw/#!/question/-JWSsGsV6hziQqGUk7IG" target="_new"><div class="sign_button">加入連署</div></a>
-                </div>
-            </div>
-            <div class="question_card">
-                <h2>毛小孩的食品安全</h2>
-                <p>在網路上面看到一則有關寵物飼料引起急性肝腎器官衰竭而致死的消息，影響寵物業與飼主。 查詢中央法規與臺北市法規，中央有「飼料管理法」，但臺北市的自治法規已將「臺北市飼料販賣業登記辦法」廢止，現有飼料販售行為並無特定規範，即「飼料管理」目前在臺北市並無規範業務單位，飼料並非食品不在衛生局業務範圍，惟寵物業的主責單位動物保護處是相關單位。所以我們遇到飼料糾紛只能找上議員。...<a class="dark_link" href="http://wethepeople.tw/#!/question/-JWLeM0tKxa6gVX-1Srz">（繼續閱讀）</a></p>
-                <div class="sign_block">
-                   <a href="http://wethepeople.tw/#!/question/-JWLeM0tKxa6gVX-1Srz" target="_new"><div class="sign_button">加入連署</div></a>
-                </div>
-            </div>
-            <div class="go_block">
-                <a href="http://wethepeople.tw/#!/question-list"><div class="ask_button">看更多提問</div></a>
-            </div>
-        </div>
-    </div><!-- end of wrapper -->
-<!-- /////////////////////////////////////////////////////////// -->
-    <div class="wrapper">
-        <div class="index_block_header">候選人綜合表現</div>
-        <div class="index_block_section">
-            <div class="index_block">
-                <h3>馮光遠</h3>
-                <img src="feng.png">
-                <span class="response_rate_text">回答率：<span class="response_rate">85%</span></span>
-                <ul><li>已回答：23</li>
-                    <li>被提問：27</li></ul>
-                <a href="http://hearttaipei.wetheptt.cc"><div class="ask_button">看回答</div></a>
-            </div>
-            <div class="index_block">
-                <h3>連勝文</h3>
-                <img src="lien.png">
-                <span class="response_rate_text">回答率：<span class="response_rate">7%</span></span>
-                <ul><li>已回答：2</li>
-                    <li>被提問：29</li></ul>
-                <a href="http://hearttaipei.wetheptt.cc"><div class="ask_button">看回答</div></a>
-            </div>
-            <div class="index_block">
-                <h3>柯文哲</h3>
-                <img src="kp.png">
-                <span class="response_rate_text">回答率：<span class="response_rate">32%</span></span>
-                <ul><li>已回答：9</li>
-                    <li>被提問：28</li></ul>
-                <a href="http://hearttaipei.wetheptt.cc"><div class="ask_button">看回答</div></a>
-            </div>
-        </div>
-        <div class="cover">
-        <p>本週候選人回答狀況，馮馮持續好寶寶，柯柯好久沒交作業啦，壞壞。連連GOGOGO正面迎擊鄉民的挑戰吧。本週候選人回答狀況，馮馮持續好寶寶，柯柯好久沒交作業啦，壞壞。連連GOGOGO正面迎擊鄉民的挑戰吧。</p>
-        </div>
+    <div class="header_meta">
+      <img src="watchout_logo.png"/>
     </div>
-    <!-- /////////////////////////////////////////////////////////// -->
-    <div class="wrapper">
-        <div class="index_block_header">BEHIND THE SCENES...</div>
-        <div class="cover">
-            <div class="question_card">
-                <img class="behind_pic" src="zuyi.jpg">
-                <div class="behind_bio">祖儀，「市長，給問嗎」的跑跑業務員，負責和候選人聯絡大小事。</div>
-                <h2>多番奔走，終於，我拿到勝文的<a class="dark_link" href='//www.youtube.com/embed/R7rgCcbRsXw'>這支影片</a></h2>
-                <!--
-                <div class="video-container" id="player">
-                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'>
-                <iframe src='//www.youtube.com/embed/R7rgCcbRsXw' frameborder='0' id="youtubeplayer0"></iframe>
-                </div>-->
-                <p>我接觸拍攝影片，大概是七月中的時候，因為許多的原因多番轉折</p>
-                <p>我還記得是全國經貿國是會議第三天結束時的中午，我衝到連勝文團隊的新媒體部門，終於做了初次的接洽。</p>
-                <p>當初沃草提供的腳本後，這段影片，是連勝文團隊自己研發，然後說服候選人，終於在本週三提供給我。跑了很久，大家都很辛苦，但這是一個關鍵的轉折：第一，連勝文候選人開始正面面對網路族群、第二，連勝文候選人在影片中承諾會上來回答。</p>
-                <p>當「參選成為事實，給問就是義務」，我由衷地相信，這樣可以改變台灣選舉的型態，強化台灣的選舉權。</p>
-                <p>過去很長的一段時間，許多人會抱怨，只能從兩個爛蘋果中，選出一個比較不爛的蘋果。然而，無論如何，他們就是我們的候選人、會影響我們的未來。是否我們有一個方法，可以一同來耕耘我們的候選人，讓他成為更好的蘋果橘子鳳梨都可以。</p>
-                <p>市長給問嗎就是這個方法。如果候選人在選前就願意與選民互動，更有助於選民了解候選人的本質；透過交流的過程，也讓候選人的政見貼近民眾所需。</p>
+  </div>
+  <!-- ////////////////////////////////////////////////////////////// -->
 
-                <p>提問吧！我們提供了平台，而候選人們也都參戰了</p>
-
-            </div>
-
-        </div>
-    </div><!-- end of wrapper -->
-    <div class="wrapper">
-        <img src="fakefooter.png" width="100%">
+  <div class="wrapper">
+    <div class="cover">
+      <div class="focus_section">
+        <img class="focus_img" src="focus_story.jpg"/>
+      </div>
     </div>
+    <div class="section topic_section">
+      <h2>主編嚴選</h2>
+      <h3>Q. 如何面對喪屍危機？</h3>
+      <p>哲學部落客：考驗創造力和都市知識的好問題！</p>
+      <a class="btn">READMORE</a>
+    </div>
+    <div class="section support_section">
+      <h2>凋零中，亟需加持</h2>
+      <h3>Q. 如何看某些人用說謊方式來反核？</h3>
+      <p>反核人士提出許多不實謠言以支持他們論點，如：廢核是世界趨勢、核四是拼裝車所以
+不安全、台灣是全世界唯一在首都附近蓋核電廠的國家...等，候選人對於這些人有沒有
+什麼話要說？</p>
+      <a class="btn">READMORE</a>
+    </div>
+    <div class="section candidate_section">
+      <h2>候選人踹共</h2>
+      <h3>Q. 是否支持同性婚姻？</h3>
+      <p>馮光遠支持同志朋友應該要有與愛人結婚的權利，他認為政府應該勇於面對宗教組織的
+阻撓，正視同志朋友在法律上和人權上的需求。</p>
+      <a class="btn">READMORE</a>
+    </div>
+    <div class="section news_section">
+      <h2>報你知</h2>
+      <h3>Q. 給問的意象打哪來？</h3>
+      <p>「市長，給問嗎？」的意象源自於「對天燈許願」，當市民許下一個願，便會點亮一盞
+天燈，越多人支持這個願望，便會給予天燈越多上昇的動力。等到集滿一定的「推」之
+後，天燈便會升空。候選人若對該願望進行回覆，便可以讓該盞天燈變成一顆星星。</p>
+      <a class="btn">READMORE</a>
+    </div>
+    <div class="section statis_section">
+      <h2>廝殺戰況</h2>
+       <img class="focus_img" src="result01.jpg"/>
+      <a class="btn">READMORE</a>
+    </div>
+    <img src="fakefooter.png" width="100%">
+  </div>
 
-    <!-- /////////////////////////////////  -->
+  <!-- /////////////////////////////////  -->
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-48524226-8', 'wetheptt.cc');
-      ga('require', 'displayfeatures');
-      ga('require', 'linkid', 'linkid.js');
-      ga('send', 'pageview');
-    </script>
+  ga('create', 'UA-48524226-8', 'wetheptt.cc');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+  </script>
 </body>
 </html>

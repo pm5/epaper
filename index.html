@@ -195,8 +195,7 @@
       bottom: 5px;
     }
     .section {
-      padding: 0 40px;
-      margin: 0 0 55px 0;
+      padding: 0 40px 55px 40px;
       position: relative;
     }
     .section h2 {
@@ -220,7 +219,29 @@
       margin: 5px 0;
       padding: 2px 6px 3px 6px;
     }
-
+    .footer ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+    .footer ul li {
+      display: inline-block;
+      margin: 0 22px;
+    }
+    .footer ul li img {
+      width: 48px;
+      height: 48px;
+      margin: 3px auto;
+      display: block;
+    }
+    .footer ul li a {
+      color: #727272;
+    }
+    .footer p {
+      padding: 20px 40px;
+      color: #727272;
+    }
   </style>
 
 </head>
@@ -240,12 +261,12 @@
   </div>
   <!-- ////////////////////////////////////////////////////////////// -->
 
-  <div class="wrapper">
-    <div class="cover">
+  <section class="wrapper">
+    <header class="cover">
       <div class="focus_section">
-        <img class="focus_img" src="focus_story.jpg"/>
+        <img class="focus_img" src="cover01.jpg"/>
       </div>
-    </div>
+    </header>
     <div class="section topic_section">
       <h2>主編嚴選</h2>
       <h3>Q. 如何面對喪屍危機？</h3>
@@ -280,8 +301,33 @@
        <img class="focus_img" src="result01.jpg"/>
       <a class="btn">READMORE</a>
     </div>
-    <img src="fakefooter.png" width="100%">
-  </div>
+    <footer class="footer">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/WatchOutTW">
+            <img src="color-facebook-96.png"/>Facebook
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="color-googleplus-96.png">Google+
+          </a>
+        </li>
+        <li>
+          <a href="http://wethepeople.tw">
+            <img src="color-facebook-96.png"/>市長，給問嗎？
+          </a></li>
+        <li>
+          <a href="http://musou.tw">
+          <img src="color-googleplus-96.png">國會無雙
+          </a>
+        </li>
+      </ul>
+      <p>Copyright © 2014 Watchout 沃草, All rights reserved.<br>
+        您會收到信是因為您在<a href="http://wethepeople.tw">市長，給問嗎？</a>訂閱了我們的電子報。
+      </p>
+    </footer>
+  </section>
 
   <!-- /////////////////////////////////  -->
 

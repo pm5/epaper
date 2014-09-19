@@ -9,6 +9,9 @@
   <title>市長，給問嗎</title>
   <link rel="shortcut icon" href="logo.png">
   <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
     html,
     body {
       font-size: 15px;
@@ -117,6 +120,7 @@
     }
     .cover {
       box-sizing: border-box;
+      height: 284px;
     }
     .cover p {
       line-height: 18px;
@@ -131,30 +135,56 @@
       text-align: center;
     }
     .section {
-      padding: 0 40px 55px 40px;
+      padding-bottom: 55px;
+      /*padding: 0 40px 55px 40px;*/
       position: relative;
     }
     .section h2 {
-      color: #002452;
+      margin: 0;
+      padding: 5px 40px;
+      color: white;
+      font-size: 30px;
+      background-color: #6ea5ac;
     }
-    .section h2, .section h3 {
-      margin: 2px 0;
+    .section h3 {
+      padding: 0 40px;
+      margin-top: 10px;
+      margin-bottom: 0;
       font-size: 30px;
     }
     .section p {
-      margin: 5px 0;
-      font-size: 16px;
+      padding: 0 40px;
+      margin: 0;
+      font-size: 20px;
       color: #727272;
       line-height: 1.5;
     }
-    .section a {
+    .section a, .statis_section a {
       font-size: 12px;
       float: right;
       background-color: #A4434E;
       color: white;
       border: 0;
-      margin: 5px 0;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 40px;
       padding: 2px 6px 3px 6px;
+    }
+    .statis_section {
+      background-color: #ececec;
+      margin: 5px;
+      padding-bottom: 50px;
+    }
+    .statis_section h2 {
+      font-size: 30px;
+      padding-top: 10px;
+      padding-left: 40px;
+    }
+    .statis_section a {
+      margin-right: 35px;
+    }
+    .statis_section img {
+      padding: 0 40px;
     }
     .footer ul {
       list-style: none;
@@ -223,7 +253,7 @@
       <p>「市長，給問嗎？」的意象源自於「對天燈許願」，當市民許下一個願，便會點亮一盞天燈，越多人支持這個願望，便會給予天燈越多上昇的動力。等到集滿一定的「推」之後，天燈便會升空。候選人若對該願望進行回覆，便可以讓該盞天燈變成一顆星星。</p>
       <a class="btn">READMORE</a>
     </div>
-    <div class="section statis_section">
+    <div class="statis_section" >
       <h2>廝殺戰況</h2>
        <img class="focus_img" src="result01.jpg"/>
       <a class="btn">READMORE</a>

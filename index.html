@@ -1,284 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html style="box-sizing: border-box; font-size: 15px; height: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, 'Heiti TC', 'Apple LiGothic Medium', '\5FAE\8EDF\6B63\9ED1\9AD4', sans-serif; color: #555555; text-rendering: optimizeLegibility; min-width: 320px; background-color: rgb(238,234,231); margin: 0px; padding: 0px;">
 <head>
-  <!-- Standard Meta -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <!-- Site Properities -->
-  <title>市長，給問嗎</title>
-  <link rel="shortcut icon" href="logo.png">
-  <style type="text/css">
-    * {
-      box-sizing: border-box;
-    }
-    html,
-    body {
-      font-size: 15px;
-      height: 100%;
-      font-family: "Helvetica Neue", Helvetica, Arial, "Heiti TC", "Apple LiGothic Medium", "\5FAE\8EDF\6B63\9ED1\9AD4", sans-serif;
-      background: #FFFFFF;
-      margin: 0px;
-      padding: 0px;
-      color: #555555;
-      text-rendering: optimizeLegibility;
-      min-width: 320px;
-      background: rgb(238,234,231);
-      /* background: rgb(53,53,53); */
-    }
-    a {
-      text-decoration: none;
-    }
-    /* ------------------------------------------------------------ */
-    /* Responsive Setup */
-    /* ------------------------------------------------------------ */
-    @media screen and (min-width: 1000px){
-      .wrapper, .transparent_wrapper{
-         width: 600px;
-      }
-    }
-    @media screen and (max-width: 1000px){
-      .wrapper, .transparent_wrapper{
-         width: 600px;
-      }
-    }
-    @media (max-width: 400px){
-      .wrapper, .transparent_wrapper{
-         width: 95%;
-         box-sizing: border-box;
-      }
-    }
-    /* ------------------------------------------------------------ */
-    /* Genaral Layout */
-    /* ------------------------------------------------------------ */
-    .page_wrapper{
-      /* background: white; */
-    }
-    .transparent_wrapper {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 10px;
-
-    }
-
-    .wrapper{
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 15px;
-      background: rgb(247,247,247);
-      background: white;
-    }
-
-    .header {
-      padding:10px;
-    }
-    .header_icon {
-      width: 100px;
-      border-radius: 100%;
-      vertical-align: bottom;
-    }
-    .header_logo {
-      width: 240px;
-      vertical-align: top;
-      margin-top: 30px;
-    }
-    .header_vol {
-      vertical-align: top;
-      margin-top: 40px;
-      margin-left: 10px;
-      font-size: 18px;
-      display: inline-block;
-      font-family: Helvetica, Arial, Sans-Serif;
-      font-weight: 600;
-      color: rgb(98,195,204);
-    }
-    @media (max-width: 400px){
-      .header_icon {
-         width: 80px;
-      }
-      .header_logo {
-         width: 180px;
-         margin-top: 25px;
-      }
-      .header_vol {
-        font-size: 12px;
-        margin-top: 0px;
-        margin-left: 15px;
-      }
-    }
-
-    .header_meta {
-      text-align: right;
-      position: relative;
-    }
-    .header_meta > img {
-      width: 120px;
-      position: absolute;
-      right: 0px;
-      bottom: 5px;
-
-    }
-    .cover {
-      box-sizing: border-box;
-    }
-    .cover p {
-      line-height: 18px;
-    }
-    .focus_section {
-      position: relative;
-    }
-    .focus_img {
-      display: block;
-      margin: 0px;
-      width:100%;
-      position: relative;
-      text-align: center;
-    }
-    .section {
-      padding-bottom: 55px;
-      /*padding: 0 40px 55px 40px;*/
-      position: relative;
-    }
-    .section h2 {
-      margin: 0;
-      padding: 5px 40px;
-      color: white;
-      font-size: 30px;
-      background-color: #6ea5ac;
-    }
-    .section h3 {
-      padding: 9px 40px;
-      margin-top: 10px;
-      margin-bottom: 0;
-      font-size: 24px;
-    }
-    .section p {
-      padding: 5px 40px;
-      margin: 0;
-      font-size: 16px;
-      color: #727272;
-      line-height: 1.5;
-    }
-    .section ol,
-    .section ul {
-      padding: 5px 40px;
-      padding-left: 70px;
-      margin: 0;
-      font-size: 16px;
-      color: #727272;
-      line-height: 1.5;
-    }
-    .section a.btn, .statis_section a.btn {
-      font-size: 12px;
-      float: right;
-      background-color: #A4434E;
-      color: white;
-      border: 0;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      margin-right: 40px;
-      padding: 2px 6px 3px 6px;
-    }
-    .statis_section {
-      background-color: #ececec;
-      margin: 5px;
-      padding-bottom: 50px;
-    }
-    .statis_section h2 {
-      font-size: 30px;
-      padding-top: 10px;
-      padding-left: 40px;
-    }
-    .statis_section a.btn {
-      margin-right: 35px;
-    }
-    .statis_section img {
-      padding: 0 40px;
-    }
-    .footer ul {
-      list-style: none;
-      text-align: center;
-      padding: 0;
-      margin: 0;
-    }
-    .footer ul li {
-      display: inline-block;
-      margin: 0 22px;
-    }
-    .footer ul li img {
-      height: 48px;
-      margin: 0 auto 8px;
-      display: block;
-    }
-    .footer ul li a {
-      color: #727272;
-      font-size: 11px;
-    }
-    .footer p {
-      padding: 20px 40px;
-      color: #727272;
-    }
-  </style>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>市長，給問嗎</title>
+<link rel="shortcut icon" href="http://pm5.github.io/epaper/logo.png">
 </head>
-<body>
-  <div class="transparent_wrapper">
-    <div class="header">
-      <img class="header_icon" src="main.png"/>
-      <img class="header_logo" src="textonly.png"/>
-      <span class="header_vol">ISSUE#0</span>
+<body style="box-sizing: border-box; font-size: 15px; height: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, 'Heiti TC', 'Apple LiGothic Medium', '\5FAE\8EDF\6B63\9ED1\9AD4', sans-serif; color: #555555; text-rendering: optimizeLegibility; min-width: 320px; background-color: rgb(238,234,231); margin: 0px; padding: 0px;" bgcolor="rgb(238,234,231)">
+  <div style="box-sizing: border-box; width: 95%; margin-left: auto; margin-right: auto; margin-top: 10px;">
+    <div style="box-sizing: border-box; padding: 10px;">
+      <img src="http://pm5.github.io/epaper/main.png" style="box-sizing: border-box; width: 80px; border-radius: 100%; vertical-align: bottom;"><img src="http://pm5.github.io/epaper/textonly.png" style="box-sizing: border-box; width: 180px; vertical-align: top; margin-top: 25px;"><span style="box-sizing: border-box; vertical-align: top; margin-top: 0px; margin-left: 15px; font-size: 12px; display: inline-block; font-family: Helvetica, Arial, Sans-Serif; font-weight: 600; color: rgb(98,195,204);">ISSUE#0</span>
     </div>
-    <div class="header_meta">
-      <img src="watchout_logo.png"/>
-    </div>
+    <div style="box-sizing: border-box; text-align: right; position: relative;" align="right">
+      <img src="http://pm5.github.io/epaper/watchout_logo.png" style="box-sizing: border-box; width: 120px; position: absolute; right: 0px; bottom: 5px;">
+</div>
   </div>
-  <section class="wrapper">
-    <header class="cover">
-      <div class="focus_section">
-        <img class="focus_img" src="cover01.jpg"/>
-      </div>
-    </header>
-    <div class="section">
-      <h2>進度報告</h2>
-      <h3>「市長，給問嗎？」電子報 cooming soon！</h3>
-      <p>致親愛的沃草好朋友：</p>
-      <p>感謝您在過去一段時日以來對沃草「市長，給問嗎？」的支持，在過去幾個月來，我們有了以下的重大突破：</p>
-      <ol style="list-style-type: decimal">
-        <li>在「Ptt鄉民有約–候選人對談」的系列活動中，沃草打造「<a style="color: #1054CA;text-decoration: none;" href="http://pm5.github.io/epaper/">市長，給問嗎＠Ptt</a>」這個第三方的提問連署平台，成功在連勝文登場回應時，創下兩萬多人同時在線觀看直播的記錄。</li>
-        <li>連勝文、柯文哲、馮光遠皆已來到網站答題，更針對同志、核能等爭議議題表態。</li>
-        <li>「市長，給問嗎？」前進大台中，林佳龍已宣布參戰！</li>
+  <section style="box-sizing: border-box; width: 95%; margin-left: auto; margin-right: auto; margin-bottom: 15px; background-color: white;"><header style="box-sizing: border-box;"><div style="box-sizing: border-box; position: relative;">
+        <img src="http://pm5.github.io/epaper/cover01.jpg" style="box-sizing: border-box; display: block; width: 100%; position: relative; text-align: center; margin: 0px;">
+</div>
+    </header><div style="box-sizing: border-box; padding-bottom: 55px; position: relative;">
+      <h2 style="box-sizing: border-box; color: white; font-size: 30px; background-color: #6ea5ac; margin: 0; padding: 5px 40px;">進度報告</h2>
+      <h3 style="box-sizing: border-box; margin-top: 10px; margin-bottom: 0; font-size: 24px; padding: 9px 40px;">「市長，給問嗎？」電子報 cooming soon！</h3>
+      <p style="box-sizing: border-box; font-size: 16px; color: #727272; line-height: 1.5; margin: 0; padding: 5px 40px;">致親愛的沃草好朋友：</p>
+      <p style="box-sizing: border-box; font-size: 16px; color: #727272; line-height: 1.5; margin: 0; padding: 5px 40px;">感謝您在過去一段時日以來對沃草「市長，給問嗎？」的支持，在過去幾個月來，我們有了以下的重大突破：</p>
+      <ol style="box-sizing: border-box; font-size: 16px; color: #727272; line-height: 1.5; list-style-type: decimal; margin: 0; padding: 5px 40px 5px 70px;">
+<li style="box-sizing: border-box;">在「Ptt鄉民有約–候選人對談」的系列活動中，沃草打造「<a style="color: #1054CA; text-decoration: none; box-sizing: border-box;" href="http://pm5.github.io/epaper/">市長，給問嗎＠Ptt</a>」這個第三方的提問連署平台，成功在連勝文登場回應時，創下兩萬多人同時在線觀看直播的記錄。</li>
+        <li style="box-sizing: border-box;">連勝文、柯文哲、馮光遠皆已來到網站答題，更針對同志、核能等爭議議題表態。</li>
+        <li style="box-sizing: border-box;">「市長，給問嗎？」前進大台中，林佳龍已宣布參戰！</li>
       </ol>
-      <p>隨著選戰日趨熱烈，沃草也將針對四位新參戰的候選人進行專訪，並邀他們一同上「市長，給問嗎？」與民眾互動；更重要的是，為了讓沃草好朋友們更快速地掌握瞬息萬變的選戰消息，沃草團隊將由10/2開始，每週四出刊「市長，給問嗎？」電子報，一直到本次選戰結束，希望讓大家迅速獲取台北版網站上最新進展，與我們一同關心本次年底大選！</p>
-      <p>（原本在「市長，給問嗎」的個人設定中，有「連署問題達到門檻時寄送通知」的選項，但經過沃草團隊再三考慮，決定改以寄送電子報的方式提供大家整理過後的最新資訊，並附送哲學部落客評論、給問幕後花絮等「番外篇」內容給大家：D）</p>
-      <p>「市長，給問嗎？」源自於對這個城市的想像、對改變的渴望、對公民參政的堅持。你，問了嗎？</p>
-      <p style="float: right;">「市長，給問嗎？」電子報主編 海綿</p>
+<p style="box-sizing: border-box; font-size: 16px; color: #727272; line-height: 1.5; margin: 0; padding: 5px 40px;">隨著選戰日趨熱烈，沃草也將針對四位新參戰的候選人進行專訪，並邀他們一同上「市長，給問嗎？」與民眾互動；更重要的是，為了讓沃草好朋友們更快速地掌握瞬息萬變的選戰消息，沃草團隊將由10/2開始，每週四出刊「市長，給問嗎？」電子報，一直到本次選戰結束，希望讓大家迅速獲取台北版網站上最新進展，與我們一同關心本次年底大選！</p>
+      <p style="box-sizing: border-box; font-size: 16px; color: #727272; line-height: 1.5; margin: 0; padding: 5px 40px;">（原本在「市長，給問嗎」的個人設定中，有「連署問題達到門檻時寄送通知」的選項，但經過沃草團隊再三考慮，決定改以寄送電子報的方式提供大家整理過後的最新資訊，並附送哲學部落客評論、給問幕後花絮等「番外篇」內容給大家：D）</p>
+      <p style="box-sizing: border-box; font-size: 16px; color: #727272; line-height: 1.5; margin: 0; padding: 5px 40px;">「市長，給問嗎？」源自於對這個城市的想像、對改變的渴望、對公民參政的堅持。你，問了嗎？</p>
+      <p style="float: right; box-sizing: border-box; font-size: 16px; color: #727272; line-height: 1.5; margin: 0; padding: 5px 40px;">「市長，給問嗎？」電子報主編 海綿</p>
     </div>
-    <hr>
-  </section>
-  <div class="transparent_wrapper">
-    <footer class="footer">
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/WatchOutTW" style="text-decoration: none;">
-            <img src="color-facebook-96.png"/>Facebook
+    <hr style="box-sizing: border-box;"></section><div style="box-sizing: border-box; width: 95%; margin-left: auto; margin-right: auto; margin-top: 10px;">
+    <footer style="box-sizing: border-box;"><ul style="box-sizing: border-box; text-align: center; list-style-type: none; margin: 0; padding: 0;">
+<li style="box-sizing: border-box; display: inline-block; margin: 0 22px;">
+          <a href="https://www.facebook.com/WatchOutTW" style="text-decoration: none; box-sizing: border-box; color: #727272; font-size: 11px;">
+            <img src="http://pm5.github.io/epaper/color-facebook-96.png" style="box-sizing: border-box; height: 48px; display: block; margin: 0 auto 8px;">Facebook
           </a>
         </li>
-        <li>
-          <a href="http://wethepeople.tw" style="text-decoration: none;">
-            <img src="color-wethepeople-96.png"/>市長給問嗎
-          </a></li>
-        <li>
-          <a href="http://musou.tw" style="text-decoration: none;">
-            <img src="color-musou-96.png">國會無雙
+        <li style="box-sizing: border-box; display: inline-block; margin: 0 22px;">
+          <a href="http://wethepeople.tw" style="text-decoration: none; box-sizing: border-box; color: #727272; font-size: 11px;">
+            <img src="http://pm5.github.io/epaper/color-wethepeople-96.png" style="box-sizing: border-box; height: 48px; display: block; margin: 0 auto 8px;">市長給問嗎
+          </a>
+</li>
+        <li style="box-sizing: border-box; display: inline-block; margin: 0 22px;">
+          <a href="http://musou.tw" style="text-decoration: none; box-sizing: border-box; color: #727272; font-size: 11px;">
+            <img src="http://pm5.github.io/epaper/color-musou-96.png" style="box-sizing: border-box; height: 48px; display: block; margin: 0 auto 8px;">國會無雙
           </a>
         </li>
       </ul>
-      <p>Copyright © 2014 Watchout 沃草, All rights reserved.<br>
-        您會收到這封信是因為您訂閱了<a href="http://wethepeople.tw" style="color: #1054CA;text-decoration: none;">市長，給問嗎？</a>的電子報。
+<p style="box-sizing: border-box; color: #727272; padding: 20px 40px;">Copyright © 2014 Watchout 沃草, All rights reserved.<br style="box-sizing: border-box;">
+        您會收到這封信是因為您訂閱了<a href="http://wethepeople.tw" style="color: #1054CA; text-decoration: none; box-sizing: border-box;">市長，給問嗎？</a>的電子報。
       </p>
     </footer>
-  </div>
-  <script>
+</div>
+  <script style="box-sizing: border-box;">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
